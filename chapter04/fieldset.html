@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Xcontent="width=device-width, initial-scale=1.0">
+    <title>fieldset과 legend 태그</title>
+    <style>
+        fieldset{padding:1.0em;margin:0 0 1.0em 0;}
+        label{display:block;line-height:240%;margin:0 0 0 3.2em;}
+        span{display:inline-block;width:70px;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>            
+            <legend>개인정보</legend>
+            <label>
+                <span>이름</span>
+                <input type="text" />
+            </label>
+            <label>
+                <span>메일주소</span>
+                <input type="email" />
+            </label>
+        </fieldset>
+        <fieldset>            
+            <legend>로그인 정보</legend>
+            <label>
+                <span>아이디</span>
+                <input type="text" />
+            </label>
+            <label>
+                <span>비밀번호</span>
+                <input type="password" />
+            </label>
+        </fieldset>
+    </form>
+	<a href="javascript:window.history.back();">뒤로가기</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Xcontent="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+    <style>
+        fieldset{padding:1.0em;margin:0 0 1.0em 0;}
+        label{display:block;line-height:240%;margin:0 0 0 2.0em;}
+        label span.font-large{display:inline-block;font-size:1.0em;width:150px;}
+        label span.font-small{font-size:0.8em;}
+        input.input-num{width:50px;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>            
+            <legend>등록 정보</legend>
+            <label>
+                <span class="font-large">참여인원
+                    <span class="font-small">(최대10명)</span>
+                </span>
+                <input type="number" class="input-num" value="1" />
+            </label>
+            <label>
+                <span class="font-large">지원물품
+                    <span class="font-small">(1인당 5개)</span>
+                </span>
+                <input type="number" class="input-num" value="1" />
+            </label>
+            <label>
+                <span class="font-large">희망 단계
+                    <span class="font-small">(하,중,상)</span>
+                </span>
+                <input type="range" value="0" />
+            </label>
+        </fieldset>
+    </form>
+	<a href="javascript:window.history.back();">뒤로가기</a>
+</body>
+</html>

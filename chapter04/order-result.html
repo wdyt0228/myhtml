@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Xcontent="width=device-width, initial-scale=1.0">
+    <title>주문서 작성하기</title>
+    <style>
+        .wrap{width:500px;margin:0 auto;}
+        fieldset{padding:1.0em;margin:0 0 1.0em 0;}
+        legend{font-weight:bold;color:#5e1154;}
+        label{display:block;padding:0.5em;clear:both;}
+        label span{float:left;margin-right:0.5em;}
+        label span.sp-1{width:70px;}
+        label span.sp-2{width:200px;}
+        input{float:left;}
+        input.txt-1{width:150px;}
+        input.txt-2{width:300px;}
+        input.num-1{width:50px;}
+        div.btn{text-align:center;}
+        div.btn input{float:none;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>상품 주문서</h2>
+        <form>
+            <fieldset>
+                <legend>개인 정보</legend>
+                <label>
+                    <span class="sp-1">이름</span>
+                    <input type="text" name="order-name" placeholder="여백없이 입력" class="txt-1"  />
+                </label>
+                <label>
+                    <span class="sp-1">연락처</span>
+                    <input type="number" name="order-tel-1" placeholder="연락 가능한 번호" class="txt-1"  />
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>배송지 정보</legend>
+                <label>
+                    <span class="sp-1">주소</span>
+                    <input type="text" name="order-addr" class="txt-2"  />
+                </label>
+                <label>
+                    <span class="sp-1">전화번호</span>
+                    <input type="number" name="order-tel-2" class="txt-1"  />
+                </label>
+                <label>
+                    <span class="sp-1">메모</span>
+                    <textarea name="order-memo" cols="40" rows="5"></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>주문 정보</legend>
+                <label>
+                    <input type="checkbox" name="chk-order-1">
+                    <span class="sp-2">과테말라 안티구아 (100g)</span>
+                    <input type="number" name="order-1" value="0" class="num-1"  />
+                    <span>개</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="chk-order-2">
+                    <span class="sp-2">인도네시아 만델링 (100g)</span>
+                    <input type="number" name="order-2" value="0" class="num-1"  />
+                    <span>개</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="chk-order-3">
+                    <span class="sp-2">탐라는도다(블렌딩) (100g)</span>
+                    <input type="number" name="order-3" value="0" class="num-1"  />
+                    <span>개</span>
+                </label>
+            </fieldset>
+            <div class="btn">
+                <input type="submit" name="order" value="주문하기" />
+                <input type="reset" name="rewrite" value="다시 작성" />
+            </div>
+        </form>
+    </div>
+	<a href="javascript:window.history.back();">뒤로가기</a>
+</body>
+</html>

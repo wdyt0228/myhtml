@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Xcontent="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+    <style>
+        fieldset{padding:1.0em;}
+        label{display:block;line-height:240%;}
+        span{display:inline-block;width:160px;text-align:right;}
+        input.sub{width:100%;}
+    </style>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <label>
+                <span>아이디</span>
+                <input type="text" />
+            </label>
+            <label>
+                <span>비밀번호</span>
+                <input type="password" />
+            </label>
+            <label>
+                <span>비밀번호 확인</span>
+                <input type="password" />
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>개인정보</legend>
+            <label>
+                <span>이름</span>
+                <input type="text" />
+            </label>
+            <label>
+                <span>메일 주소</span>
+                <input type="email" />
+            </label>
+            <label>
+                <span>연락처</span>
+                <input type="number" />
+            </label>
+            <label>
+                <span>블로그/홈페이지</span>
+                <input type="url" />
+            </label>
+        </fieldset>
+        <label>
+            <input type="submit" value="가입하기" class="sub" />
+        </label>
+    </form>
+	<a href="javascript:window.history.back();">뒤로가기</a>
+</body>
+</html>
