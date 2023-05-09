@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 포지셔닝</title>
+    <style>
+        /* body{background:url(images/absolute.jpg)no-repeat 2px -76px;} */
+        .wrap{position:relative;border:1px solid #ccc;width:300px;height:300px;}
+        .wrap div{background:#0094FF;width:50px;height:50px;position:absolute;}
+        .box1{top:0;left:0}
+        .box2{top:0;right:0}
+        .box3{bottom:0;left:0}
+        .box4{bottom:0;right:0}
+        .box5{top:100px;left:100px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+	<div style="margin-top:2.0em;"><a href="javascript:window.history.back();" style="text-decoration:none;color:crimson;font:bold 12px 돋움;">뒤로가기</a></div>
+</body>
+</html>
