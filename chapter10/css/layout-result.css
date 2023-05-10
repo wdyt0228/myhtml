@@ -1,0 +1,20 @@
+body{font:14px 맑은고딕;background:#000;line-height:1.5em;}
+body,ul,li,section,p,h1,h2,h3{margin:0;box-sizing:border-box;}
+header{background:rgb(6, 6, 43);}
+nav ul{width:880px;margin:0 auto;padding:30px 30px 0 0;height:80px;text-align:right;}
+nav li{display:inline-block;margin:0 20px 0 0;}
+nav li a, nav li a:visited{font-weight:bold;color:cornflowerblue;text-decoration:none;text-shadow:0 0 2px #000;}
+nav li a:hover{color:bisque;}
+h2,h3{line-height:1.8em;}
+article{padding:10px 2%;font-size:13px;background:#fff;}
+article div{width:880px;margin:0 auto;}
+section{width:32%;border:1px solid #000;padding:2%;height:577px;}
+section h3{background:url(../images/bullet.png) no-repeat left 4px;padding:0 0 0 26px;}
+section.section1{float:left;margin:0 2% 0 0;}
+section.section2{float:right;}
+section dt{font-weight:bold;}
+section dd{margin-bottom:10px;}
+article::after {content: "";clear:both;display:block;}
+aside{background:teal;color:#fff;padding:20px 2%;}
+aside div{width:880px;margin:0 auto;}
+footer{background:#000;color:#fff;text-align:center;height:50px;line-height:50px;}

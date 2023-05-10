@@ -1,0 +1,23 @@
+html,body{height:100%;}
+body{font:14px 맑은고딕;background:#000;line-height:1.5em;}
+body,ul,li,section,p,h1,h2,h3{margin:0;box-sizing:border-box;}
+header{background:rgb(6, 6, 43);position:relative;z-index:1;}
+nav ul{padding:30px 30px 0 0;height:80px;text-align:right;}
+nav li{display:inline-block;margin:0 20px 0 0;}
+nav li a, nav li a:visited{font-weight:bold;color:cornflowerblue;text-decoration:none;text-shadow:0 0 2px #000;}
+nav li a:hover{color:bisque;}
+h2,h3{line-height:1.8em;}
+article{position:relative;font-size:13px;background:#fff;
+    min-height:100%;margin:-80px 0 -225px 0;padding:0 2%;}
+article h2{padding:100px 0 0 0;}
+section{width:32%;border:1px solid #000;
+    padding:2%;}
+section.section1{float:left;height:100%;margin-bottom:-225px;}
+section.section2{}
+section.section3{right:2%;}
+section h3{background:url(../images/bullet.png) no-repeat left 8px;padding:0 0 0 26px;}
+section dt{font-weight:bold;}
+section dd{margin-bottom:10px;}
+aside{position:relative;z-index:1;background:teal;color:#fff;padding:20px 2%;height:135px;}
+aside div{}
+footer{position:relative;z-index:1;background:#000;color:#fff;text-align:center;height:50px;line-height:50px;}

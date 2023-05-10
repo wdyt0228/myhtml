@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Rounded navi</title>
+    <style>
+        .navbar{padding:0;list-style:none;border-right:#000;}
+        .navbar::after{content: "";clear: both;display: block;}
+        .navbar li{float:left;line-height:40px;padding:0 25px;margin:0;border:1px solid #000;}
+        .navbar li:first-child{border-top-left-radius:15px;border-bottom-left-radius:15px;border-right:none;}
+        .navbar li:nth-child(2){border-right:none;}
+        .navbar li:last-child{border-top-right-radius:15px;border-bottom-right-radius:15px;border-left:none;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li>Home</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JQuery</li>
+        </ul>
+    </nav>
+	<div style="margin-top:2.0em;"><a href="javascript:window.history.back();" style="text-decoration:none;color:crimson;font:bold 12px 돋움;">뒤로가기</a></div>
+</body>
+</html>
