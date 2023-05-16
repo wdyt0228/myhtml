@@ -1,0 +1,48 @@
+<div class="wat">
+    <div class="ifr" style="overflow:hidden;">
+        <div class="container-wat">
+            <div class="inner-wat">
+                <img src="images/wat1.jpg">
+                <button class="watbtn2 right">></button>
+            </div>
+            <div class="inner-wat">
+                <img src="images/wat2.jpg">
+                <button class="watbtn1 left"><</button>
+                <button class="watbtn3 right">></button>
+            </div>
+            <div class="inner-wat">
+                <img src="images/wat3.jpg">
+                <button class="watbtn4 left"><</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelector('.watbtn1').addEventListener('click',function(){
+            document.querySelector(".container-wat").style.transform='translate(0)';
+        });
+
+        document.querySelector('.watbtn2').addEventListener('click',function(){
+            document.querySelector(".container-wat").style.transform='translate(-100vw)';
+        });
+
+        document.querySelector('.watbtn3').addEventListener('click',function(){
+            document.querySelector(".container-wat").style.transform='translate(-200vw)';
+        });
+
+        document.querySelector('.watbtn4').addEventListener('click',function(){
+            document.querySelector(".container-wat").style.transform='translate(-100vw)';
+        });
+
+    </script>
+</div>
+<a id="fadeOutBtn10" href="#" class="btn-close"><img src="images/btn-close.png" alt="창 닫기" /></a>
+
+<script>    
+    $(function() {
+        $("#fadeOutBtn10").on("click", function() {
+            $("#divBox10").fadeOut();
+        });
+    });
+</script>     

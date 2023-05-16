@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 소개</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/Backstretch.js" type="text/javascript"></script>
+    <script src="js/Popup.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <table class="main-tbl">
+    <tr>
+        <th>이름</th>
+        <td><a id="fadeInBtn1" href="#">김태호(金台澔)</a></td>
+    </tr>
+    <tr>
+        <th rowspan="2">출생</th>
+        <td><a id="fadeInBtn5" href="#">1981년</a> 3월 8일 (42세)</td>
+    </tr>
+    <tr>
+        <td><a id="fadeInBtn2" href="#">부산 침례병원</a> 출생</td>
+    </tr>
+    <tr>
+        <th>국적</th>
+        <td>대한민국</td>
+    </tr>
+    <tr>
+        <th>본관</th>
+        <td><a id="fadeInBtn4" href="#">김해 김씨(金海 金氏)</a></td>
+    </tr>
+    <tr>
+        <th>혈액형</th>
+        <td><a id="fadeInBtn7" href="#">a형</a></td>
+    </tr>
+    <tr>
+        <th rowspan="2">가족</th>
+        <td><a id="fadeInBtn13" href="#">부모님</a>, 형(1979년생)</td>
+    </tr>
+    <tr>
+        <td>
+            <div>배우자 <a id="fadeInBtn8" href="#">난파청쿠(국적:미얀마)</a></div>
+            <div>딸 김<a id="fadeInBtn9" href="#"><span class="line-th">메이</span></a><a id="fadeInBtn12" href="#">하나</a></div>
+        </td>
+    </tr>
+    <tr>
+        <th>학력</th>
+        <td>
+            <a href="http://iyh.icees.kr/main.do" target="_blank">용현초등학교</a> -
+            <a href="http://yong.icems.kr/main.do" target="_blank">용현중학교</a> -
+            <a href="http://yeonsu-h.icehs.kr/main.do" target="_blank">연수고등학교</a> -
+            <a href="https://www.inu.ac.kr/mbshome/mbs/inu/index.do" target="_blank">인천대학교</a>(전자공학과/4년중퇴)
+        </td>
+    </tr>
+    <tr>
+        <th>종교</th>
+        <td><a id="fadeInBtn10" href="#">불교 90%</a> / <a id="fadeInBtn11" href="#">기독교 10%</a></td>
+    </tr>
+    <tr>
+        <th>취미</th>
+        <td><span class="line-th">아이돌 보고 침흘리기</span><a id="fadeInBtn6" href="#">음악 감상</a></td>
+    </tr>
+    <tr>
+        <th>특기</th>
+        <td>컴퓨터에 오래 앉아있기(3일정도는 가능)</td>
+    </tr>
+    <tr>
+        <th>병역</th>
+        <td>군필(공익근무요원:
+            <a href="https://www.haeundae.go.kr/index.do" target="_blank">해운대구청</a> 
+            <a href="https://www.haeundae.go.kr/index.do?menuCd=DOM_000000101005024001" target="_blank">도시관리과</a> 
+            <a href="https://www.haeundae.go.kr/index.do?menuCd=DOM_000000101005003001" target="_blank">광고물계</a>)
+        </td>
+    </tr>
+    <tr>
+        <th>MBTI</th>
+        <td><a id="fadeInBtn3" href="#">infj</a></td>
+    </tr>
+    </table>
+    
+    <div data-include1="divBox1" id="divBox1"></div>
+    <div data-include2="divBox2" id="divBox2"></div>
+    <div data-include3="divBox3" id="divBox3"></div>
+    <div data-include4="divBox4" id="divBox4"></div>
+    <div data-include5="divBox5" id="divBox5"></div>
+    <div data-include6="divBox6" id="divBox6"></div>
+    <div data-include7="divBox7" id="divBox7"></div>
+    <div data-include8="divBox8" id="divBox8"></div>
+    <div data-include9="divBox9" id="divBox9"></div>
+    <div data-include10="divBox10" id="divBox10"></div>
+    <div data-include11="divBox11" id="divBox11"></div>
+    <div data-include12="divBox12" id="divBox12"></div>
+    <div data-include13="divBox13" id="divBox13"></div>
+
+    <script>
+        $(function(){
+          var includes1 = $('[data-include1="divBox1"]');
+          var includes2 = $('[data-include2="divBox2"]');
+          var includes3 = $('[data-include3="divBox3"]');
+          var includes4 = $('[data-include4="divBox4"]');
+          var includes5 = $('[data-include5="divBox5"]');
+          var includes6 = $('[data-include6="divBox6"]');
+          var includes7 = $('[data-include7="divBox7"]');
+          var includes8 = $('[data-include8="divBox8"]');
+          var includes9 = $('[data-include9="divBox9"]');
+          var includes10 = $('[data-include10="divBox10"]');
+          var includes11 = $('[data-include11="divBox11"]');
+          var includes12 = $('[data-include12="divBox12"]');
+          var includes13 = $('[data-include13="divBox13"]');
+
+          jQuery.each(includes1, function(){
+            $(this).load('include/pop-name.html');
+          });
+          jQuery.each(includes2, function(){
+            $(this).load('include/birth-map.html');
+          });
+          jQuery.each(includes3, function(){
+            $(this).load('include/mbti.html');
+          });
+          jQuery.each(includes4, function(){
+            $(this).load('include/family-name.html');
+          });
+          jQuery.each(includes5, function(){
+            $(this).load('include/y81s.html');
+          });
+          jQuery.each(includes6, function(){
+            $(this).load('include/f-music.html');
+          });
+          jQuery.each(includes7, function(){
+            $(this).load('include/blood-type.html');
+          });
+          jQuery.each(includes8, function(){
+            $(this).load('include/thailand.html');
+          });
+          jQuery.each(includes9, function(){
+            $(this).load('include/hanamaykim.html');
+          });
+          jQuery.each(includes10, function(){
+            $(this).load('include/wat.html');
+          });
+          jQuery.each(includes11, function(){
+            $(this).load('include/chocopie.html');
+          });
+          jQuery.each(includes12, function(){
+            $(this).load('include/hana.html');
+          });
+          jQuery.each(includes13, function(){
+            $(this).load('include/family.html');
+          });
+        });
+     </script>
+
+    <!-- 이미지 롤링 스크립트 -->
+    <script>
+        $.backstretch([
+            "images/bg1.jpg"
+            , "images/bg2.jpg"
+            , "images/bg3.jpg"
+            , "images/bg4.jpg"
+            , "images/bg5.jpg"
+            , "images/bg6.jpg"
+            , "images/bg7.webp"
+        ], {duration: 7000, fade: 1500});
+    </script>
+</body>
+
+</html>
