@@ -114,9 +114,7 @@ div{box-sizing:border-box;}
     
     /* 음악감상 */
     .f-music{overflow:hidden;position:absolute;top:50%;left:0%;width:100%;margin:-30% 0 0 0;}
-    .container{width:600vw;transition:transform 0.5s;
-        /* transform: translate(-100vw); */
-    }
+    .container{width:600vw;transition:transform 0.5s;}
     .inner{width:100vw;float:left;}
     .inner div{position:relative;width:100%;padding-bottom:56.25%;}
     .inner img{width:100%;}
@@ -151,6 +149,8 @@ div{box-sizing:border-box;}
             .name{position:absolute;top:20px;left:50%;width:499px;height:729px;margin:0 0 0 -249px;background:#000;box-shadow:0 0 5.0rem 100rem #000;}
             /* 1981년 */
             .y81s{height:100%;overflow-y:auto;width:100vw;background:#000;box-shadow:0 0 5.0rem 100rem #000;}
+            .y81s{-ms-overflow-style: none;scrollbar-width: none;}
+            .y81s::-webkit-scrollbar{display:none;}
             /* 출생지 지도 */
             .birth-map{position:absolute;top:20px;left:50%;width:682px;height:527px;margin:0 0 0 -341px;background:#000;box-shadow:0 0 5.0rem 100rem #000;}
             /* 김해 김씨 */
@@ -166,6 +166,12 @@ div{box-sizing:border-box;}
             /* 불교 */
             .wat{overflow:hidden;position:absolute;top:0;left:0;width:100%;margin:0;box-shadow:0 0 5.0rem 50rem #000;}
             /* 기독교 */
+            /* 음악감상 */
+            .btn-music button{cursor: pointer;box-sizing:border-box;float:left;width:15.5%;height:25vh;display:block;text-indent:-1000vw;border:5px solid transparent;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
             .chocopie{width:100%;height:100%;background:#000 url(../images/chocopie.png) no-repeat 50% 50%;background-size:20vw;}
             /* mbti */
             .mbti{position:absolute;top:20px;left:50%;width:400px;margin:0 0 0 -200px;padding:2.0em;background:#fff;box-shadow:0 0 5.0rem 50rem #000;}
