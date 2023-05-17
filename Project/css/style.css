@@ -289,6 +289,9 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
     
     
     @media screen and (max-height:724px){
+
+        /* 1981년 */
+        .item{min-height:20vw;flex-basis:20vw;flex-grow:1;text-indent:-1000vw;}
         
         /* 가족사진 */
         .family{padding:0;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
