@@ -17,8 +17,7 @@ div{box-sizing:border-box;}
 .f-l{float:left;}
 .line-th{text-decoration:line-through;}
 
-
-/* 화면 너비 768px 이하일 때의 배경 */
+/* 화면 너비 768px 이상일 때 */
 @media screen and (min-width:768px){
 
 body{font-size:14px;}
@@ -32,7 +31,6 @@ table.main-tbl{position:absolute;top:50%;left:50%;width:600px;margin:-354px 0 0 
 @media not all and (orientation: portrait){
     @media screen and (max-height:724px){
         body{font-size:12px;}
-        #container{}
         table.main-tbl{position:absolute;top:20px;left:50%;width:600px;margin:0 0 0 -300px;background:#fff;box-shadow:0 0 5.0rem 0 #333;opacity:.9;}
     }
 }
@@ -152,8 +150,18 @@ table.main-tbl{position:absolute;top:50%;left:50%;width:600px;margin:-354px 0 0 
 
 }
 
+/* 화면 너비 1080px 이상일 때 */
+@media screen and (min-width:1080px){
+    .h-inner .before{width:20%;}
+    .h-inner .after{width:20%;}
+}
+/* 화면 너비 1280px 이상일 때 */
+@media screen and (min-width:1280px){
+    .h-inner .before{width:16.66%;}
+    .h-inner .after{width:16.66%;}
+}
 
-/* 화면 너비 768px 이하일 때의 배경 */
+/* 화면 너비 768px 이하일 때 */
 @media screen and (max-width:767px){
 
 body{font-size:16px;}
@@ -208,7 +216,7 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .hanamaykim img{display:block;width:100%;}
 
 /* 하나 */
-.hana{overflow:hidden;position:absolute;top:0;left:0;width:100%;box-shadow:0 0 5.0rem 50rem #000;}
+.hana{overflow-x:hidden;position:absolute;top:0;left:0;width:100%;box-shadow:0 0 5.0rem 50rem #000;}
 .hana h2{position:absolute;width:50%;top:1rem;left:1rem;margin:0 0 0 0;opacity:.5;}
 .hana h2 img{width:100%;}
 .h-container{width:200vw;transition:transform 0.5s;}
@@ -216,10 +224,10 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .h-inner .before{width:33.33%;}
 .h-inner .after{width:33.33%;}
 .h-inner .f-l img{width:100%;}
-.btn-hana button{position:absolute;top:30%;margin:-5vw 0 0 0;cursor:pointer;width:20vw;height:20vw;border-radius:10vw;}
+.btn-hana button{position:absolute;top:10%;margin:0;cursor:pointer;width:20vw;height:20vw;border-radius:10vw;}
 .btn-hana button.left{left:2.0vw;background:#000 url(../images/arrow-left.png) no-repeat 50% 50%;background-size:10vw 10vw;}
 .btn-hana button.right{right:2.0vw;background:#000 url(../images/arrow-right.png) no-repeat 50% 50%;background-size:10vw 10vw;}
-.btn-hana button{opacity:0.3;text-indent:-1000vw;border:0;}
+.btn-hana button{opacity:.5;text-indent:-1000vw;border:0;}
 .btn-hana button:focus{opacity:.8;}
 .btn-hana button:active{opacity:.8;}
 .btn-hana button:hover{opacity:.8;}
@@ -246,7 +254,7 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .chocopie{width:100%;height:100%;padding:5.0em 1.0em;position:fixed;background:#000 url(../images/chocopie.png) no-repeat 50% 50%;}
 
 /* mbti */
-.mbti{padding:2.0em;background:#fff;box-shadow:0 0 5.0rem 50rem #fff;line-height:2.0em;}
+.mbti{padding:2.0em;background:#fff;box-shadow:0 0 5.0rem 50rem #fff;line-height:2.0em;text-align:center;}
 .mbti img{width:60%;}
 .mbti h2{text-align:left;}
 .mbti h3{text-align:left;margin:1.0em 0 0.5em 0;}
@@ -276,22 +284,29 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .btn-music .btn5{margin-right:1.4%;background:url(../images/thumb-music5.jpg) no-repeat 50% 50%;background-size:cover;}
 .btn-music .btn6{background:url(../images/thumb-music6.jpg) no-repeat 50% 50%;background-size:cover;}
 
-    @media not all and (orientation: portrait){
+/* 가로방향 */
+@media not all and (orientation: portrait){
+    
+    
+    @media screen and (max-height:724px){
         
+        /* 가족사진 */
+        .family{padding:0;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
         
-        @media screen and (max-height:724px){
-            
-            /* 가족사진 */
-            .family{padding:0;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
-            
-            /* 하나메이킴 */
-            .hanamaykim{padding:0;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
-            
-            /* 불교 */
-            .wat{padding:0;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;top:0;left:0;width:100%;height:100%;}
-
-        }
+        /* 하나메이킴 */
+        .hanamaykim{padding:0;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
         
+        /* 불교 */
+        .wat{padding:0;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;top:0;left:0;width:100%;height:100%;}
+        
+        /* 하나 */
+        .h-inner .before{width:16.66%;}
+        .h-inner .after{width:16.66%;}
+        .btn-hana button{position:absolute;top:30%;margin:0;cursor:pointer;width:15vw;height:15vw;border-radius:15vw;}
+        .btn-hana button.left{left:2.0vw;background:#000 url(../images/arrow-left.png) no-repeat 50% 50%;background-size:10vw 10vw;}
+        .btn-hana button.right{right:2.0vw;background:#000 url(../images/arrow-right.png) no-repeat 50% 50%;background-size:10vw 10vw;}
     }
+    
+}
 
 }
