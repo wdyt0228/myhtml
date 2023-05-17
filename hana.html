@@ -1,0 +1,167 @@
+
+<style>
+.f-l{float:left;}
+.clear{clear:both;}
+
+</style>
+
+<div class="hana">
+    <div class="h-container">
+        <div class="h-inner">
+            <h2><img src="images/before.png" /></h2>
+
+            <div class="f-l before">
+                <img src="images/movie1.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie2.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie3.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie4.webp" />
+            </div>
+
+            <div class="f-l before">
+                <img src="images/movie5.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie6.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie7.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie8.webp" />
+            </div>
+
+            <div class="f-l before">
+                <img src="images/movie1.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie2.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie3.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie4.webp" />
+            </div>
+
+            <div class="f-l before">
+                <img src="images/movie5.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie6.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie7.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie8.webp" />
+            </div>
+
+            <div class="f-l before">
+                <img src="images/movie1.webp" />
+            </div>
+            <div class="f-l before">
+                <img src="images/movie2.webp" />
+            </div>
+
+            <div class="btn-hana">
+                <button class="btn2-hana right">After</button>
+            </div>
+        </div>
+        <div class="h-inner">
+            <h2><img src="images/after.png" /></h2>
+
+            <div class="f-l after">
+                <img src="images/movie9.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie10.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie11.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie12.webp" />
+            </div>
+
+            <div class="f-l after">
+                <img src="images/movie10.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie11.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie12.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie9.webp" />
+            </div>
+
+            <div class="f-l after">
+                <img src="images/movie11.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie12.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie9.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie10.webp" />
+            </div>
+            
+            <div class="f-l after">
+                <img src="images/movie12.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie9.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie10.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie11.webp" />
+            </div>
+
+            <div class="f-l after">
+                <img src="images/movie9.webp" />
+            </div>
+            <div class="f-l after">
+                <img src="images/movie10.webp" />
+            </div>
+            
+            <div class="btn-hana">
+                <button class="btn1-hana left">Before</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>   
+
+    // btn2를 누르면
+    // transform: translate(-100vw);
+
+    document.querySelector('.btn1-hana').addEventListener('click',function(){
+        document.querySelector(".h-container").style.transform='translate(0)';
+    });
+
+    document.querySelector('.btn2-hana').addEventListener('click',function(){
+        document.querySelector(".h-container").style.transform='translate(-100vw)';
+    });
+
+</script>
+<a id="fadeOutBtn12" href="#" class="btn-close"><img src="images/btn-close.png" alt="창 닫기" /></a>
+    
+<script>    
+    $(function() {
+        $("#fadeOutBtn12").on("click", function() {
+            $("#divBox12").fadeOut();
+        });
+    });
+</script>      
