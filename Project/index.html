@@ -9,7 +9,7 @@
 	  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="js/Backstretch.js" type="text/javascript"></script>
     <script src="js/Popup.js" type="text/javascript"></script>
-
+    <!-- 파비콘 -->
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -27,6 +27,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- 파비콘 끝 -->
 </head>
 
 <body>
@@ -114,61 +115,83 @@
     <div data-include13="divBox13" id="divBox13"></div>
 
     <script>
-        $(function(){
-          var includes1 = $('[data-include1="divBox1"]');
-          var includes2 = $('[data-include2="divBox2"]');
-          var includes3 = $('[data-include3="divBox3"]');
-          var includes4 = $('[data-include4="divBox4"]');
-          var includes5 = $('[data-include5="divBox5"]');
-          var includes6 = $('[data-include6="divBox6"]');
-          var includes7 = $('[data-include7="divBox7"]');
-          var includes8 = $('[data-include8="divBox8"]');
-          var includes9 = $('[data-include9="divBox9"]');
-          var includes10 = $('[data-include10="divBox10"]');
-          var includes11 = $('[data-include11="divBox11"]');
-          var includes12 = $('[data-include12="divBox12"]');
-          var includes13 = $('[data-include13="divBox13"]');
+      $(function() {
+        var includes = [
+          'include/pop-name.html',
+          'include/birth-map.html',
+          'include/mbti.html',
+          'include/family-name.html',
+          'include/y81s.html',
+          'include/f-music.html',
+          'include/blood-type.html',
+          'include/thailand.html',
+          'include/hanamaykim.html',
+          'include/wat.html',
+          'include/chocopie.html',
+          'include/hana.html',
+          'include/family.html'
+        ];
 
-          jQuery.each(includes1, function(){
-            $(this).load('include/pop-name.html');
-          });
-          jQuery.each(includes2, function(){
-            $(this).load('include/birth-map.html');
-          });
-          jQuery.each(includes3, function(){
-            $(this).load('include/mbti.html');
-          });
-          jQuery.each(includes4, function(){
-            $(this).load('include/family-name.html');
-          });
-          jQuery.each(includes5, function(){
-            $(this).load('include/y81s.html');
-          });
-          jQuery.each(includes6, function(){
-            $(this).load('include/f-music.html');
-          });
-          jQuery.each(includes7, function(){
-            $(this).load('include/blood-type.html');
-          });
-          jQuery.each(includes8, function(){
-            $(this).load('include/thailand.html');
-          });
-          jQuery.each(includes9, function(){
-            $(this).load('include/hanamaykim.html');
-          });
-          jQuery.each(includes10, function(){
-            $(this).load('include/wat.html');
-          });
-          jQuery.each(includes11, function(){
-            $(this).load('include/chocopie.html');
-          });
-          jQuery.each(includes12, function(){
-            $(this).load('include/hana.html');
-          });
-          jQuery.each(includes13, function(){
-            $(this).load('include/family.html');
-          });
-        });
+        for (var i = 0; i < includes.length; i++) {
+          var selector = $('[data-include' + (i + 1) + '="divBox' + (i + 1) + '"]');
+          selector.load(includes[i]);
+        }
+      });
+        // $(function(){
+        //   var includes1 = $('[data-include1="divBox1"]');
+        //   var includes2 = $('[data-include2="divBox2"]');
+        //   var includes3 = $('[data-include3="divBox3"]');
+        //   var includes4 = $('[data-include4="divBox4"]');
+        //   var includes5 = $('[data-include5="divBox5"]');
+        //   var includes6 = $('[data-include6="divBox6"]');
+        //   var includes7 = $('[data-include7="divBox7"]');
+        //   var includes8 = $('[data-include8="divBox8"]');
+        //   var includes9 = $('[data-include9="divBox9"]');
+        //   var includes10 = $('[data-include10="divBox10"]');
+        //   var includes11 = $('[data-include11="divBox11"]');
+        //   var includes12 = $('[data-include12="divBox12"]');
+        //   var includes13 = $('[data-include13="divBox13"]');
+
+        //   jQuery.each(includes1, function(){
+        //     $(this).load('include/pop-name.html');
+        //   });
+        //   jQuery.each(includes2, function(){
+        //     $(this).load('include/birth-map.html');
+        //   });
+        //   jQuery.each(includes3, function(){
+        //     $(this).load('include/mbti.html');
+        //   });
+        //   jQuery.each(includes4, function(){
+        //     $(this).load('include/family-name.html');
+        //   });
+        //   jQuery.each(includes5, function(){
+        //     $(this).load('include/y81s.html');
+        //   });
+        //   jQuery.each(includes6, function(){
+        //     $(this).load('include/f-music.html');
+        //   });
+        //   jQuery.each(includes7, function(){
+        //     $(this).load('include/blood-type.html');
+        //   });
+        //   jQuery.each(includes8, function(){
+        //     $(this).load('include/thailand.html');
+        //   });
+        //   jQuery.each(includes9, function(){
+        //     $(this).load('include/hanamaykim.html');
+        //   });
+        //   jQuery.each(includes10, function(){
+        //     $(this).load('include/wat.html');
+        //   });
+        //   jQuery.each(includes11, function(){
+        //     $(this).load('include/chocopie.html');
+        //   });
+        //   jQuery.each(includes12, function(){
+        //     $(this).load('include/hana.html');
+        //   });
+        //   jQuery.each(includes13, function(){
+        //     $(this).load('include/family.html');
+        //   });
+        // });
      </script>
 
     <!-- 이미지 롤링 스크립트 -->
