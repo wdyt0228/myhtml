@@ -217,7 +217,9 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .item{min-height:30vw;flex-basis:30vw;flex-grow:1;text-indent:-1000vw;}
 
 /* 출생지 지도 */
-.birth-map{padding:1.0em;box-shadow:0 0 5.0rem 50rem #000;background:#000;}
+.birth-map{height:100%;overflow:auto;position:fixed;padding:1.0em;box-shadow:0 0 5.0rem 50rem #000;background:#000;}
+.birth-map::-webkit-scrollbar{display:none;}
+/* .birth-map{padding:1.0em;box-shadow:0 0 5.0rem 50rem #000;background:#000;} */
 .birth-map img{width:100%;}
 .birth-map h2{color:#fff;line-height:2.5em;}
 .birth-map a{color:#fff;line-height:2.5em;}
@@ -237,26 +239,29 @@ table.main-tbl{position:absolute;top:0;left:5%;margin:5% 0;width:90%;background:
 .family img{width:100%;}
 
 /* 태국지도 */
-.thailand{min-width:100%;height:100%;box-shadow:0 0 5.0rem 50rem #000;}
+.thailand{min-width:100%;height:100%;overflow:auto;position:fixed;box-shadow:0 0 5.0rem 50rem #000;}
+/* .thailand{min-width:100%;height:100%;box-shadow:0 0 5.0rem 50rem #000;} */
 .thailand .ifr{position:absolute;width:100%;height:100%;border:none;}
 
 /* 하나메이킴 */
-.hanamaykim{padding:5.0em 1.0em;height:100%;position:fixed;background:#000;}
+.hanamaykim{padding:5.0em 1.0em;height:100%;overflow:auto;position:fixed;background:#000;box-shadow:0 0 5.0rem 50rem #000;}
+.hanamaykim::-webkit-scrollbar{display:none;}
+/* .hanamaykim{padding:5.0em 1.0em;height:100%;position:fixed;background:#000;} */
 .hanamaykim img{display:block;width:100%;}
 
 /* 하나 */
-.hana{overflow-x:hidden;position:absolute;top:0;left:0;width:100%;box-shadow:0 0 5.0rem 50rem #000;}
+.hana{overflow-x:hidden;position:fixed;top:0;left:0;width:100%;box-shadow:0 0 5.0rem 50rem #000;}
 .hana h2{position:absolute;width:50%;top:1rem;left:1rem;margin:0 0 0 0;opacity:.5;}
 .hana h2 img{width:100%;}
 .h-container{width:200vw;transition:transform 0.5s;}
 .h-inner{position:relative;width:100vw;float:left;}
-.h-inner .before{width:33.33%;}
-.h-inner .after{width:33.33%;}
+.h-inner .before{width:25%;}
+.h-inner .after{width:25%;}
 .h-inner .f-l img{width:100%;}
-.btn-hana button{position:absolute;top:10%;margin:0;cursor:pointer;width:20vw;height:20vw;border-radius:10vw;}
+.btn-hana button{position:absolute;top:30%;margin:0;cursor:pointer;width:20vw;height:20vw;border-radius:10vw;}
 .btn-hana button.left{left:2.0vw;background:#000 url(../images/arrow-left.png) no-repeat 50% 50%;background-size:10vw 10vw;}
 .btn-hana button.right{right:2.0vw;background:#000 url(../images/arrow-right.png) no-repeat 50% 50%;background-size:10vw 10vw;}
-.btn-hana button{opacity:.5;text-indent:-1000vw;border:0;}
+.btn-hana button{opacity:.8;text-indent:-1000vw;border:0;}
 .btn-hana button:focus{opacity:.8;}
 .btn-hana button:active{opacity:.8;}
 .btn-hana button:hover{opacity:.8;}
