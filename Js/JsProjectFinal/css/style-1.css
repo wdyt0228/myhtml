@@ -1,0 +1,24 @@
+body{margin:0;padding:0;font-family:맑은고딕,Helvetica;background:#9a59b5;}
+
+.content-wrap{width:700px;margin:20px auto;}
+.content-left{float:left;width:400px;box-sizing:border-box;border-radius:10px;background:#fff;padding:20px;}
+.content-left table{width:100%;text-align:center;}
+.content-left table td{width:14.2857%;height:30px;text-align:center;border-radius:5px;border:1px solid #ddd;box-shadow:1px 1px 1px #fff inset,-1px -1px 1px #eee inset;background:#f7f7f7;}
+.content-left table tr td:first-child{color:rgb(226, 28, 121);}
+.content-left table tr td:last-child{color:rgb(102, 15, 216);}
+.content-left table thead tr:nth-child(2) td{background:#fbffe4;}
+.content-left table thead th{font-size:20px;height:40px;}
+.content-left table label{display:block;box-sizing:border-box;border-radius:5px;font-size:14px;border:1px solid #ddd;line-height:24px;cursor:pointer;background:#efefef;}
+.content-left table label:hover{background:#fff;}
+.content-left table label:active{box-shadow:1px 1px 3px #ddd inset;padding:1px 0 0 1px;}
+.content-right{float:right;}
+
+.main-month{display:inline-block;font-size:16px;font-weight:bold;}
+.main-day{display:inline-block;font-size:16px;font-weight:bold;}
+.main-date{display:inline-block;font-size:16px;font-weight:bold;}
+.main-holiday{display:inline-block;font-size:16px;font-weight:bold;color:rgb(226,28,121);}
+.today-select{background:rgb(255, 230, 0)!important;border:none!important;box-shadow:none!important;}
+.active{background:#000!important;border:none!important;box-shadow:none!important;border-radius:5px;color:#fff!important;font-weight:bold;}
+.holiday{color:rgb(226, 28, 121);}
+.date-hover{font-size:16px;font-weight:normal;cursor:pointer;transition:font-size 0.2s,font-weight 0.2s;}
+.date-hover:hover{font-size:24px;font-weight:bold;background:#fff;box-shadow:none;}

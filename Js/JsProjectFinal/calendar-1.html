@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스케줄러</title>    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="content-wrap">
+            <div class="content-right">
+                <div class="main-wrap">
+                    <div id="main-month" class="main-month"></div>
+                    <div id="main-date" class="main-date"></div>
+                    <div>
+                        <span id="main-day" class="main-day"></span>
+                        <span id="main-holiday" class="main-holiday"></span>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="todo-wrap">
+                    
+                    <div class="input-group">
+                        <input id="item" class="form-control" placeholder="할일을 입력하세요">
+                        <button id="addItemBtn" type="button" class="btn btn-primary">할일 추가</button>
+                    </div>
+                    <ul id="todolist" class="list-group"></ul>
+
+                </div>
+            </div>
+            <div class="content-left">
+                <table id="calendar">
+                    <thead>
+                    <tr class="btn-wrap clearfix">
+                        <th>
+                            <label id="prev">
+                                이전
+                            </label>
+                        </th>
+                        <th id="current-year-month" colspan="5"></td>
+                        <th>
+                            <label id="next">
+                                다음
+                            </label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="sun">sun</td>
+                        <td>mon</td>
+                        <td>tue</td>
+                        <td>wed</td>
+                        <td>thu</td>
+                        <td>fri</td>
+                        <td class="sat">sat</td>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body" class="calendar-body">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/Calendar-1.js"></script>
+    
+</body>
+</html>
