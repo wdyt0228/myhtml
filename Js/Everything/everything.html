@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별다줄</title>
+    <style>
+        body{margin:0;}
+        #wrap{position:absolute;top:50%;left:50%;width:800px;height:400px;margin:-200px 0 0 -400px;border-radius:20px;border:5px solid tomato;
+            background:#fcdddd url(images/bg.png) no-repeat bottom left;}
+        #container{position:absolute;top:20px;right:20px;width:320px;height:350px;overflow:auto;}
+        .result{color:crimson;}
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            
+            
+            const wrap=document.querySelector("#wrap")
+            const input=document.querySelector("input")
+            const btn=document.querySelector("button")
+            input.placeholder="줄일 말을 입력해주세요"
+
+            
+            const everything=()=>{
+
+                // 빈 글 제출 막기
+                if (input.value.trim()==="") {
+                    const alertMessages=[
+                        "줄일 말을 입력해주세요. 줄여서 '줄말입'ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+                        "줄말입",
+                    ];
+                    const randomIndex=Math.floor(Math.random()*alertMessages.length);
+                    const alertMessage=alertMessages[randomIndex];
+                    alert(alertMessage);
+                    return;
+                }
+                
+                const text=input.value;         // 텍스트박스에 들어가는 내용
+                const words=text.split(" ")     // 공백으로 분리된 단어 배열 생성
+                let result=""                   // 결과를 저장할 변수 초기화
+                
+                for(const word of words) {
+                    const firstLetter=word[0]   // 단어의 첫 번째 글자 가져오기
+                    result+=firstLetter         // 결과에 첫 번째 글자 추가
+                }
+                
+                const p=document.createElement("p")
+                container.appendChild(p)
+
+                // 결과 출력
+                const phrases=[`${text}: `,"음",".",".",".","이것은 ",`<span class="result">"${result}"</span>`,"(이)라고 하겠음!!"];
+                const delay=500; // 0.5초
+
+                const printPhrases=(phrases,delay)=>{
+                    phrases.forEach((phrase,index)=>{
+                        setTimeout(()=>{
+                            p.innerHTML+=phrase
+                        },index*delay)
+                    })
+                }
+                printPhrases(phrases,delay)
+                console.log(phrases[6])
+
+                // 텍스트 박스 비우기
+                input.value=""
+            }
+            
+            // 엔터키 입력시 결과 출력하기
+            btn.addEventListener("click",everything)
+            input.addEventListener("keyup",(event)=>{
+                const enterKey=13
+                if(event.keyCode==enterKey){
+                    everything()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <input type="text" />
+            <button>submit</button>
+        </div>
+    </div>
+</body>
+</html>
