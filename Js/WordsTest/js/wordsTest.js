@@ -129,11 +129,26 @@ function checkAnswer(word,userAnswer){
         const txt=document.querySelector("#txt");
         form.innerHTML = "";
 
-        const score=Math.round((correctA/currentIndex)*100*100)/100;
-        const completionMsg=document.createElement("span");
-        container.appendChild(completionMsg);
-        completionMsg.textContent=`${currentIndex}문제 중 ${correctA}문제 맞춤(${score}점)`;
+        const score=Math.round((correctA/currentIndex)*100*100)/100
+        const wrapResult=document.createElement("div")
+        const completionMsg=document.createElement("span")
+        const retestBtn=document.createElement("button")
+        container.appendChild(wrapResult)
+        wrapResult.appendChild(completionMsg)
+        wrapResult.appendChild(retestBtn)
+        retestBtn.textContent="다시하실?"
+        retestBtn.id="btn-retest"
+        completionMsg.textContent=`${currentIndex}문제 중 ${correctA}문제 맞춤(${score}점)`
         // result1.innerHTML = "";
+        
+        retestBtn.addEventListener("click",()=>{
+            
+            txt.innerHTML = "";
+            wrapResult.innerHTML = "";
+            currentIndex = 0;
+            correctA = 0;
+            showQuestion();
+        })
 
     } else {
         showQuestion();
