@@ -139,7 +139,26 @@ function checkAnswer(word,userAnswer){
         retestBtn.textContent="다시하실?"
         retestBtn.id="btn-retest"
         completionMsg.textContent=`${currentIndex}문제 중 ${correctA}문제 맞춤(${score}점)`
-        // result1.innerHTML = "";
+
+        if(score===100){
+            const perfect=document.querySelector("#perfect")
+            perfect.style.display="block"
+            setTimeout(()=>{
+                perfect.style.display="none"
+            },3000)
+        }else if(score<=50){
+            const poor=document.querySelector("#poor")
+            poor.style.display="block"
+            setTimeout(()=>{
+                poor.style.display="none"
+            },3000)
+        }else{
+            const yet=document.querySelector("#yet")
+            yet.style.display="block"
+            setTimeout(()=>{
+                yet.style.display="none"
+            },3000)
+        }
         
         retestBtn.addEventListener("click",()=>{
             
