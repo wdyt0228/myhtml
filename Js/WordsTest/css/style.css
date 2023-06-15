@@ -62,3 +62,9 @@ body{margin:0;padding:0;background:#eae9ff;}
 #yet img{margin:-157px 0 0 -150px;}
 
 .crimson{color:crimson}
+#container button.btn-sound{box-sizing:border-box;padding:0 10px;height:30px;border-radius:5px;font-weight:500;font-size:13px;cursor:pointer;margin-left:10px;
+    background:#a540fd;color:#fff;border:1px solid #be40fd;box-shadow:1px 1px 3px #777,-1px -1px 1px #333 inset,1px 1px 1px #dbabff inset;}
+#container button.btn-sound:hover {
+    background:#c140fd;box-shadow:none;box-shadow:1px 1px 5px #777;}
+#container button.btn-sound:active {
+    background:#c140fd;box-shadow:1px 1px 5px #777,2px 2px 3px #666 inset;}

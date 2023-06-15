@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words Test</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrap">
+        <div class="gnb">
+            <label for="file">
+                <div class="btn-upload">Load Your Words</div>
+            </label>
+            <input class="input-file" type="file" name="file" id="file" accept=".csv" onchange="handleFileUpload(event)">
+            <button class="btn-start">Words Test Start! (0 Questions)</button>
+        </div>
+        <div class="bg-merryma"></div>
+        <div id="container">
+            <div class="txt-1">단어 파일을 불러오셈</div>
+            <div id="txt"></div>
+        </div>
+    </div>
+    <div id="perfect"><img src="images/perfect.png" alt="천잰데" /></div>
+    <div id="poor"><img src="images/poor.gif" alt="ㅋㅋㅋ" /></div>
+    <div id="yet"><img src="images/yet.png" alt="아직멀었어" /></div>
+    <script src="js/wordsSoundTest.js"></script>
+</body>
+</html>

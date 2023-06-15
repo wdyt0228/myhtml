@@ -51,22 +51,32 @@ function showQuestion() {
     const container=document.querySelector("#container")
     const word=wordData[currentIndex][0]
     const answer=wordData[currentIndex][1]
+    const soundUrl =wordData[currentIndex][2]
     
     const span1=document.createElement("span")
     const question=document.createElement("p")
 
     // 기존 내용 제거
     // container.innerHTML=""
-    container.querySelector(".txt-1").textContent = "";
+    container.querySelector(".txt-1").textContent = ""
 
     // 문제 표시
     // span1.textContent=`${currentIndex+1} of ${wordData.length}`
     const txt=document.querySelector("#txt")
     span1.textContent=`Question ${currentIndex+1}`           
-    question.textContent=answer
+    // question.textContent=answer
     txt.appendChild(span1)
     txt.appendChild(question)
     // console.log(answer);
+
+    // 사운드 재생 버튼 추가
+    const playSoundBtn=document.createElement("span")
+    playSoundBtn.innerHTML=`<button class="btn-sound">Play Sound</button>`
+    playSoundBtn.addEventListener("click",()=>{
+        const audio=new Audio(soundUrl)   // Audio 객체 생성
+        audio.play()    // 사운드 재생
+    })
+    span1.appendChild(playSoundBtn)
 
     // 입력 폼 표시
     const form=document.createElement("div")
@@ -88,7 +98,8 @@ function showQuestion() {
                 return
             }
             checkAnswer(word,inputValue)
-            form.innerHTML = "";
+            form.innerHTML=""
+            playSoundBtn.innerHTML=""
         }
     });
 
@@ -102,7 +113,8 @@ function showQuestion() {
             return
         }
         checkAnswer(word,inputValue)
-        form.innerHTML = "";
+        form.innerHTML=""
+        playSoundBtn.innerHTML=""
     })
     form.appendChild(submitBtn)
 
