@@ -115,11 +115,11 @@ function checkAnswer(word,userAnswer){
     // const result=document.getElementById("result");
     if (word.toLowerCase()===userAnswer.toLowerCase()){
         // result.textContent="맞음"
-        result1.textContent="맞음"
+        result1.innerHTML="<span>맞음</span>"
         correctA++
     } else {
         // result.textContent=`틀림 (정답: ${word})`
-        result1.textContent=`틀림 (정답: ${word})`
+        result1.innerHTML=`<span class="crimson">틀림 (정답: ${word})</span>`
     }
     console.log(correctA)
     currentIndex++
@@ -129,7 +129,7 @@ function checkAnswer(word,userAnswer){
         const txt=document.querySelector("#txt");
         form.innerHTML = "";
 
-        const score=Math.round((correctA/currentIndex)*100*100)/100
+        const score=Math.round((correctA/currentIndex)*100*100)/100 // 소수점 2잘까지 보여주기
         const wrapResult=document.createElement("div")
         const completionMsg=document.createElement("span")
         const retestBtn=document.createElement("button")
@@ -140,28 +140,28 @@ function checkAnswer(word,userAnswer){
         retestBtn.id="btn-retest"
         completionMsg.textContent=`${currentIndex}문제 중 ${correctA}문제 맞춤(${score}점)`
 
-        if(score===100){
-            const perfect=document.querySelector("#perfect")
-            perfect.style.display="block"
+        // 점수에 따라 보상이미지 내보냄
+        const perfect=document.querySelector("#perfect")
+        const poor=document.querySelector("#poor")
+        const yet=document.querySelector("#yet")
+
+        const displayReward=(element,displayTime)=>{
+            element.style.display="block"
             setTimeout(()=>{
-                perfect.style.display="none"
-            },3000)
+                element.style.display="none"
+            },displayTime)
+        }
+
+        if (score===100){
+            displayReward(perfect,3000)
         }else if(score<=50){
-            const poor=document.querySelector("#poor")
-            poor.style.display="block"
-            setTimeout(()=>{
-                poor.style.display="none"
-            },3000)
+            displayReward(poor,3000)
         }else{
-            const yet=document.querySelector("#yet")
-            yet.style.display="block"
-            setTimeout(()=>{
-                yet.style.display="none"
-            },3000)
+            displayReward(yet,3000)
         }
         
+        // 다시하기 버튼
         retestBtn.addEventListener("click",()=>{
-            
             txt.innerHTML = "";
             wrapResult.innerHTML = "";
             currentIndex = 0;
