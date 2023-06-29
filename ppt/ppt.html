@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리액트를 이용한 웹 어플리케이션 제작</title>
+    <style>
+        html, body{height:100%;margin:0;padding:0;overflow:hidden;background:#000;}
+        .wrap{height:100%;transition:transform 0.5s ease-in-out;}
+        .div{
+            background-repeat:no-repeat;
+            background-position:50% 50%;
+            height:100%;
+            background-size:contain;
+            opacity:0;
+            transition:opacity 0.5s ease-in-out;
+        }
+        .div.active{opacity:1;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="div" data-bg="images/bg1.png"></div>
+        <div class="div" data-bg="images/bg2.png"></div>
+        <div class="div" data-bg="images/bg3-1.png"></div>
+        <div class="div" data-bg="images/bg3-2.png"></div>
+        <div class="div" data-bg="images/bg3-3.png"></div>
+        <div class="div" data-bg="images/bg3-4.png"></div>
+        <div class="div" data-bg="images/bg3-5.png"></div>
+        <div class="div" data-bg="images/bg3-6.png"></div>
+        <div class="div" data-bg="images/bg3-7.png"></div>
+        <div class="div" data-bg="images/bg3-8.png"></div>
+        <div class="div" data-bg="images/bg4-1.png"></div>
+        <div class="div" data-bg="images/bg4-2.png"></div>
+        <div class="div" data-bg="images/bg5-1.png"></div>
+        <div class="div" data-bg="images/bg5-2.png"></div>
+        <div class="div" data-bg="images/bg5-3.png"></div>
+        <div class="div" data-bg="images/bg6.png"></div>
+    </div>
+    <button>다음</button>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('button');
+            const wrap = document.querySelector('.wrap');
+            const divs = document.querySelectorAll('.wrap > div');
+            let currentIndex = 0;
+
+            divs.forEach((div, index) => {
+                div.style.backgroundImage = `url(${div.dataset.bg})`;
+                // 첫 번째 div 요소를 활성화
+                if (index === 0) {
+                    div.classList.add('active');
+                }
+            });
+
+            function nextSlide() {
+                if (currentIndex < divs.length - 1) {
+                divs[currentIndex].classList.remove('active');
+                currentIndex++;
+                divs[currentIndex].classList.add('active');
+                wrap.style.transform = `translateY(-${currentIndex * 100}%)`;
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                divs[currentIndex].classList.remove('active');
+                currentIndex--;
+                divs[currentIndex].classList.add('active');
+                wrap.style.transform = `translateY(-${currentIndex * 100}%)`;
+                }
+            }
+
+            button.addEventListener('click', nextSlide);
+
+            wrap.addEventListener('click', function(e) {
+                if (e.target.classList.contains('div')) {
+                nextSlide();
+                }
+            });
+
+            document.addEventListener('keyup', function(event) {
+                if (event.key === 'ArrowRight') {
+                nextSlide();
+                } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+                }
+            });
+            
+            let scrollTimeout;
+    
+            function throttledNextSlide(event) {
+                // clear the timeout
+                clearTimeout(scrollTimeout);
+
+                // set a new timeout
+                scrollTimeout = setTimeout(() => {
+                    if (event.deltaY > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }, 200); // Change this to adjust the throttling time
+            }
+
+            document.addEventListener('wheel', function(event) {
+                throttledNextSlide(event);
+                // prevent default scroll behavior
+                event.preventDefault();
+            }, { passive: false });
+        });
+
+    </script>
+</body>
+</html>
